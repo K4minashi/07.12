@@ -17,7 +17,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/k4minashi/app_0:1.0 .
       - run: docker push ghcr.io/k4minashi/app_0:1.0
-      - run: ssh -o 'k4minashi-0712-oq5w2dnwide@k4minashi-0712-oq5w2dnwide.ssh.ws-eu106.gitpod.io' 'cd /workspace/07.12 && docker compose pull && docker compose up -d'
+      - run: ssh -o "StrictHostKeyCheking no" 'k4minashi-0712-oq5w2dnwide@k4minashi-0712-oq5w2dnwide.ssh.ws-eu106.gitpod.io' 'cd /workspace/07.12 && docker compose pull && docker compose up -d'
   install:
     runs-on: unbuntu-latest
     needs: [build]
