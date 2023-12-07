@@ -1,3 +1,3 @@
-From python: latest
-Workdir /app
+FROM python: latest
+WORKDIR /app
 ENTRYPOINT ["python", "main.py"]
