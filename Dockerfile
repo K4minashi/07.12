@@ -1,3 +1,3 @@
 From python: latest
 Workdir /app
-Run python main.py
+ENTRYPOINT ["python", "main.py"]
